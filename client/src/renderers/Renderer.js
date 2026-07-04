@@ -1,8 +1,4 @@
-/**
- * Abstract Renderer Interface
- * Ensures that if we switch from <model-viewer> to Three.js or Babylon.js later,
- * the core framework and UI remain completely unchanged.
- */
+
 export class Renderer {
   constructor(canvasRef) {
     this.canvasRef = canvasRef;

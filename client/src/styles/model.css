@@ -1,6 +1,4 @@
-/**
- * Fullscreen 3D Model Canvas Styling
- */
+
 model-viewer {
   width: 100% !important;
   height: 100% !important;
@@ -10,7 +8,6 @@ model-viewer {
   --progress-mask: transparent;
 }
 
-/* Hide default model-viewer controls if any */
 model-viewer::part(default-progress-bar) {
   display: none;
 }

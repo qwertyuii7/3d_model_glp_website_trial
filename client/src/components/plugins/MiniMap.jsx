@@ -2,9 +2,6 @@ import React from 'react';
 import { useStoryStore } from '../../store/storyStore';
 import { useUIStore } from '../../store/uiStore';
 
-/**
- * MiniMap Plugin — Pure CSS classes.
- */
 export const MiniMap = React.memo(function MiniMap({ scenes }) {
   const activeSceneIndex = useStoryStore((s) => s.activeSceneIndex);
   const isScreenshotMode = useUIStore((s) => s.isScreenshotMode);
@@ -34,18 +31,18 @@ export const MiniMap = React.memo(function MiniMap({ scenes }) {
         background: 'rgba(255,255,255,0.03)', borderRadius: 12,
         border: '1px solid rgba(255,255,255,0.06)', overflow: 'hidden',
       }}>
-        {/* Grid */}
+        {}
         <div style={{
           position: 'absolute', inset: 0,
           background: 'linear-gradient(to right, rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.04) 1px, transparent 1px)',
           backgroundSize: '14px 14px',
         }} />
-        {/* Hall outline */}
+        {}
         <div style={{
           position: 'absolute', inset: 10,
           border: '1px solid rgba(255,255,255,0.1)', borderRadius: 8,
         }} />
-        {/* Position dot */}
+        {}
         <div style={{
           position: 'absolute', width: 10, height: 10, borderRadius: '50%',
           background: 'var(--accent)', boxShadow: '0 0 12px rgba(56,189,248,0.9)',

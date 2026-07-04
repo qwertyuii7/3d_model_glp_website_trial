@@ -1,9 +1,6 @@
 import React from 'react';
 import { useUIStore } from '../../store/uiStore';
 
-/**
- * LightingToggle Plugin — Pure CSS classes.
- */
 const presets = [
   { id: 'neutral', label: 'Daylight', emoji: '☀️' },
   { id: 'sunset', label: 'Sunset', emoji: '🌅' },

@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useResourceManager } from '../engine/ResourceManager';
 
-/**
- * Loader — Meroe-style minimal centered text + thin progress line.
- */
 export const Loader = React.memo(function Loader() {
   const status = useResourceManager((s) => s.status);
   const progress = useResourceManager((s) => s.progress);

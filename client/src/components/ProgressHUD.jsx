@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { useStoryStore } from '../store/storyStore';
 import { useUIStore } from '../store/uiStore';
 
-/**
- * ProgressHUD — Meroe-style: thin 2px bottom bar + tiny centered label.
- */
 export const ProgressHUD = React.memo(function ProgressHUD({ scenes }) {
   const activeSceneIndex = useStoryStore((s) => s.activeSceneIndex);
   const isScreenshotMode = useUIStore((s) => s.isScreenshotMode);

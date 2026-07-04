@@ -4,10 +4,6 @@ import { useCameraStore } from '../store/cameraStore';
 import { useUIStore } from '../store/uiStore';
 import { frameworkConfig } from '../framework.config';
 
-/**
- * Reusable Scene Timeline Engine
- * Orchestrates IntersectionObserver for self-contained scenes and triggers camera/plugin hooks.
- */
 export function useSceneEngine(scenes, cameraPresets) {
   const setActiveSceneIndex = useStoryStore((state) => state.setActiveSceneIndex);
   const activeSceneIndex = useStoryStore((state) => state.activeSceneIndex);
@@ -24,11 +20,10 @@ export function useSceneEngine(scenes, cameraPresets) {
           if (entry.isIntersecting) {
             const index = Number(entry.target.getAttribute('data-scene-index'));
             if (!isNaN(index) && index !== activeSceneIndex) {
-              // Trigger scene change
+
               const prevScene = scenes[activeSceneIndex];
               const nextScene = scenes[index];
 
-              // Notify plugins
               Object.values(plugins).forEach((plugin) => {
                 if (plugin.onSceneExit && prevScene) plugin.onSceneExit(prevScene);
                 if (plugin.onSceneEnter && nextScene) plugin.onSceneEnter(nextScene);
@@ -36,7 +31,6 @@ export function useSceneEngine(scenes, cameraPresets) {
 
               setActiveSceneIndex(index);
 
-              // Update camera preset if not in calibration mode
               if (cameraPresets && cameraPresets[nextScene.id]) {
                 const preset = cameraPresets[nextScene.id];
                 setCameraTarget(preset.orbit, preset.target, preset.fov);

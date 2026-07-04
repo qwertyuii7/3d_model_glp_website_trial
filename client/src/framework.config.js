@@ -1,7 +1,4 @@
-/**
- * Reusable 3D Exhibition Framework Configuration
- * All global branding, theme tokens, lighting presets, transitions, and accessibility defaults.
- */
+
 export const frameworkConfig = {
   branding: {
     name: "Natural History Museum",
@@ -46,16 +43,16 @@ export const frameworkConfig = {
     },
   },
   transitions: {
-    cameraDuration: 1800, // ms
-    cameraEasing: "easeInOutCubic", // Apple Vision Pro smoothness
-    uiDuration: 0.6, // s
+    cameraDuration: 1800,
+    cameraEasing: "easeInOutCubic",
+    uiDuration: 0.6,
   },
   accessibility: {
     reducedMotionCameraDuration: 400,
     ariaLive: "polite",
   },
   performance: {
-    lazyLoadCardsWindow: 1, // render current ± 1 card to keep DOM light
+    lazyLoadCardsWindow: 1,
     intersectionThreshold: 0.6,
   },
   plugins: {

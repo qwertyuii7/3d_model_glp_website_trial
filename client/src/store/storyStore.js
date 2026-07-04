@@ -1,9 +1,5 @@
 import { create } from 'zustand';
 
-/**
- * Zustand Store: Story & Scene State
- * Tracks active scene, scroll progress, and emits analytics events without re-rendering unrelated components.
- */
 export const useStoryStore = create((set, get) => ({
   activeSceneIndex: 0,
   scrollProgress: 0,

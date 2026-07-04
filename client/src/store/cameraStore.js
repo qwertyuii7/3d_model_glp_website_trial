@@ -1,9 +1,5 @@
 import { create } from 'zustand';
 
-/**
- * Zustand Store: Authoritative Camera State
- * Manages orbit, target, fov, and interruption flags for discrete cubic/quartic camera tweening.
- */
 export const useCameraStore = create((set, get) => ({
   orbit: '30deg 75deg 18m',
   target: '0m 6m 0m',

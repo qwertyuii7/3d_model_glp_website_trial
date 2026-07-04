@@ -2,10 +2,6 @@ import React from 'react';
 import { useStoryStore } from '../store/storyStore';
 import { useUIStore } from '../store/uiStore';
 
-/**
- * Navigation Component
- * Desktop side icon nav & Mobile bottom sheet drawer. Pure CSS classes.
- */
 const sceneIcons = {
   Landmark: '🏛️', Compass: '🧭', Bone: '🦴', Footprints: '🦕',
   Trees: '🌳', Layers: '🪨', Sparkles: '☄️', BookOpen: '📜',
@@ -31,7 +27,7 @@ export const Navigation = React.memo(function Navigation({ scenes }) {
 
   return (
     <>
-      {/* Desktop Side Nav */}
+      {}
       <nav className="side-nav">
         {scenes.map((scene, idx) => {
           const isActive = idx === activeSceneIndex;
@@ -51,7 +47,7 @@ export const Navigation = React.memo(function Navigation({ scenes }) {
         })}
       </nav>
 
-      {/* Mobile Trigger */}
+      {}
       <button
         className="mobile-nav-trigger"
         onClick={() => setMobileDrawerOpen(true)}
@@ -60,7 +56,7 @@ export const Navigation = React.memo(function Navigation({ scenes }) {
         🧭
       </button>
 
-      {/* Mobile Drawer */}
+      {}
       {isMobileDrawerOpen && (
         <div className="mobile-drawer-backdrop open" onClick={() => setMobileDrawerOpen(false)}>
           <div className="mobile-drawer" onClick={(e) => e.stopPropagation()}>

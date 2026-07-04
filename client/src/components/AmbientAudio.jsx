@@ -1,9 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { useUIStore } from '../store/uiStore';
 
-/**
- * AmbientAudio — tiny minimal button.
- */
 export const AmbientAudio = React.memo(function AmbientAudio() {
   const isPlaying = useUIStore((s) => s.isAudioPlaying);
   const toggle = useUIStore((s) => s.toggleAudio);

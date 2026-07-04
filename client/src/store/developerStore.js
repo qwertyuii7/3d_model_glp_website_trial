@@ -1,9 +1,5 @@
 import { create } from 'zustand';
 
-/**
- * Zustand Store: Developer & Calibration Metrics
- * Tracks live FPS, frame times, model load duration, and live camera coordinates for developers.
- */
 export const useDeveloperStore = create((set) => ({
   fps: 60,
   frameTime: 16.6,

@@ -1,7 +1,4 @@
-/**
- * Story & Exhibition Card Styles
- * Selective glassmorphism avoiding mobile GPU overload.
- */
+
 .story-scene-card {
   position: relative;
   z-index: 10;
@@ -17,7 +14,6 @@
   -webkit-backdrop-filter: blur(22px);
 }
 
-/* Reduce blur on mobile devices to save GPU performance */
 @media (max-width: 768px) {
   .glass-panel {
     backdrop-filter: blur(12px);

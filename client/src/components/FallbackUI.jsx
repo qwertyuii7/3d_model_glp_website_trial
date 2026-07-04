@@ -1,10 +1,6 @@
 import React from 'react';
 import { frameworkConfig } from '../framework.config';
 
-/**
- * FallbackUI Component
- * Rendered when WebGL is unavailable or model fails to load. Pure CSS.
- */
 export const FallbackUI = React.memo(function FallbackUI({ scenes }) {
   return (
     <div style={{ minHeight: '100vh', width: '100%', background: 'var(--bg)', color: 'var(--text-primary)', padding: '48px 24px', overflowY: 'auto' }}>

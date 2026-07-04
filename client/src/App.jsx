@@ -46,10 +46,10 @@ export default function App() {
       )}
       <ScreenshotMode />
 
-      {/* ===== SCROLLABLE CONTENT ===== */}
+      {}
       <div style={{ position: 'relative', zIndex: 5 }}>
 
-        {/* HERO — Google Arts & Culture Enhanced Landing */}
+        {}
         <section className="hero">
           <div className="hero-bg" />
           <div className="hero-content">
@@ -60,11 +60,11 @@ export default function App() {
               <span className="dot">•</span>
               <span>متحف التاريخ الطبيعي</span>
             </div>
-            
+
             <h1 className="hero-title">Hintze Hall</h1>
-            
+
             <p className="hero-desc">The Cathedral of Nature.</p>
-            
+
             <div className="hero-cue">
               <span>Scroll to explore</span>
               <div className="hero-cue-line" />
@@ -72,7 +72,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* STORY SECTIONS */}
+        {}
         {hintzeExhibits.map((scene, idx) => (
           <StorySection key={scene.id} scene={scene} index={idx} total={hintzeExhibits.length} />
         ))}

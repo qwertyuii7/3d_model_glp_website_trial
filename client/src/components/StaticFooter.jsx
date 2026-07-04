@@ -8,7 +8,7 @@ export const StaticFooter = React.memo(function StaticFooter() {
           <h2>Hintze Hall</h2>
           <p className="footer-sub">Natural History Museum • London</p>
         </div>
-        
+
         <div className="footer-links">
           <div className="footer-col">
             <h4>Explore</h4>
@@ -30,7 +30,7 @@ export const StaticFooter = React.memo(function StaticFooter() {
           </div>
         </div>
       </div>
-      
+
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Natural History Museum & Google Arts Experiments Reference.</p>
       </div>

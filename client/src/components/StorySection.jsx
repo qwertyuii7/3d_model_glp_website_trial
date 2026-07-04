@@ -1,9 +1,6 @@
 import React from 'react';
 import { useStoryStore } from '../store/storyStore';
 
-/**
- * StorySection — Meroe-style floating text. No cards, no glass. Just clean type on 3D.
- */
 const alignPattern = ['', 'right', '', 'right', 'center'];
 
 export const StorySection = React.memo(function StorySection({ scene, index, total }) {

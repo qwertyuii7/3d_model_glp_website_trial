@@ -3,9 +3,6 @@ import { useResourceManager } from '../engine/ResourceManager';
 import { useDeveloperStore } from '../store/developerStore';
 import { useAnimationEngine } from '../engine/AnimationEngine';
 
-/**
- * ModelViewerAdapter — Fullscreen fixed 3D canvas.
- */
 export const ModelViewerAdapter = React.memo(function ModelViewerAdapter({ modelSrc }) {
   const viewerRef = useRef(null);
   const startLoading = useResourceManager((s) => s.startLoading);
